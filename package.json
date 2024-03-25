@@ -6,9 +6,14 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
+
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "tsc && next build"
+
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
