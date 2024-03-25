@@ -1,29 +1,43 @@
 import React from 'react';
-import { Meta, StoryObj } from '@storybook/react';
-import { BaseCard, CardProps } from './BaseCard';
+import { StoryObj, Meta } from '@storybook/react';
+import { BaseCard, CardProps } from './BaseCard'; // Adjust the import path as necessary
 
-const meta: Meta<typeof BaseCard> = {
+export default {
   title: 'Components/BaseCard',
   component: BaseCard,
-  tags: ['autodocs'], // Optional: if you're using @storybook/addon-docs
+  argTypes: {
+    title: { control: 'text' },
+    date: { control: 'date' },
+    thumbnail: { control: 'text' }
+  },
+} as Meta<CardProps>;
+
+const Template: StoryObj<CardProps> = {
+  render: (args) => <BaseCard {...args} />,
 };
 
-export default meta;
-
-const Template: StoryObj<CardProps> = (args) => <BaseCard {...args} />;
-
-// Example static thumbnail for Storybook.
-// Simplify by using just the URL string for the thumbnail image.
-const exampleThumbnailUrl = 'https://i.ibb.co/Bq2J6JT/Static-Thumbnail.png';
-
-export const Default = Template.bind({});
-Default.args = {
-  title: 'Card Title',
-  date: '2024-03-21',
+export const Default: StoryObj<CardProps> = {
+  ...Template,
+  args: {
+    title: 'Example Title',
+    date: new Date().toISOString(),
+    thumbnail: 'https://i.ibb.co/Bq2J6JT/Static-Thumbnail.png',
+  },
 };
 
-export const WithThumbnail = Template.bind({});
-WithThumbnail.args = {
-  ...Default.args,
-  thumbnail: exampleThumbnailUrl, // Provide the URL directly as a string
+export const NoThumbnail: StoryObj<CardProps> = {
+  ...Template,
+  args: {
+    title: 'No Thumbnail Provided',
+    date: new Date().toISOString(),
+  },
+};
+
+export const CustomThumbnail: StoryObj<CardProps> = {
+  ...Template,
+  args: {
+    title: 'Custom Thumbnail',
+    date: new Date().toISOString(),
+    thumbnail: 'https://placekitten.com/500/300', // Example placeholder image
+  },
 };
