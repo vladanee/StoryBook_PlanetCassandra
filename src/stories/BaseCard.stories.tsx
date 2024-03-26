@@ -41,3 +41,4 @@ export const CustomThumbnail: StoryObj<CardProps> = {
     thumbnail: 'https://placekitten.com/500/300', // Example placeholder image
   },
 };
+
