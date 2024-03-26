@@ -76,4 +76,4 @@ const BaseCard: React.FC<CardProps> = ({ title, date, thumbnail }) => {
 }
 
 export { BaseCard };
-export type{ CardProps };
+export type { CardProps };
