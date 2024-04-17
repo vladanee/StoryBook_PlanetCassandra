@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "algoliasearch": "^4.23.3",
     "gatsby": "^5.13.4",
     "gatsby-plugin-image": "^3.13.1",
     "next": "^14.1.4",
