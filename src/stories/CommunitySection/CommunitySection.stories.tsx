@@ -1,6 +1,6 @@
 // CommunitySection.stories.tsx
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import CommunitySection from './CommunitySection'; // Adjust the import path as necessary
 
 export default {
@@ -13,8 +13,9 @@ export default {
       </div>
     )
   ]
-} as ComponentMeta<typeof CommunitySection>;
+} as Meta<typeof CommunitySection>;
 
-const Template: ComponentStory<typeof CommunitySection> = () => <CommunitySection />;
-
-export const Default = Template.bind({});
+// Using StoryObj for the template
+export const Default: StoryObj<typeof CommunitySection> = {
+  render: () => <CommunitySection />
+};

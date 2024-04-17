@@ -5,7 +5,7 @@ import Planet from '../../images/PlanetPlanetCassandra.png'
 import Discord from '../../images/Discord.png'
 import { Grid, Typography, Container, Button } from '@mui/material';
 import { navigate } from 'gatsby';
-
+import Image from 'next/image';
 
 const DiscordSection = () => {
     return (
@@ -37,7 +37,7 @@ const DiscordSection = () => {
                         </Typography>
                         <Grid container alignItems="center" spacing={2} sx={{ flexDirection: 'row' }}>
                             <Grid item>
-                                <img
+                                <Image
                                     src={Planet} // Replace with your Discord image source
                                     alt="Discord"
                                     style={{ width: '150px', height: '150px' }}
@@ -95,7 +95,7 @@ const DiscordSection = () => {
                             alignItems: 'center',
                         }}
                     >
-                        <img src={Discord} alt="Right side image" style={{ maxWidth: '100%' }} />
+                        <Image src={Discord} alt="Right side image" style={{ maxWidth: '100%' }} />
                     </Grid>
                 </Grid>
             </Container>
