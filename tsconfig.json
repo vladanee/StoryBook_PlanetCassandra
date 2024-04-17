@@ -8,29 +8,24 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx", // Changed from "preserve" to better support JSX transformations in React 17+
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "strict": true, // Enabling strict type-checking options
+    "noEmit": true // Ensures TypeScript compiles files but does not output files, suitable for Next.js which handles transpilation
   },
   "include": [
-    "next-env.d.ts",
+    "next-env.d.ts", // Ensure this file exists for Next.js type declarations
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules", // Standard practice to exclude node_modules
+    ".next/" // Exclude .next directory from TypeScript compilation to avoid type checking build output
   ]
 }

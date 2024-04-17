@@ -6,7 +6,6 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "tsc && next build && babel src -d lib",
@@ -32,7 +31,7 @@
     "@storybook/addons": "^7.6.17",
     "@storybook/blocks": "^8.1.0-alpha.3",
     "@storybook/nextjs": "^8.1.0-alpha.3",
-    "@storybook/react": "^8.0.4",
+    "@storybook/react": "^8.0.8",
     "@storybook/test": "^8.1.0-alpha.3",
     "@types/node": "^20",
     "@types/react": "^18",
