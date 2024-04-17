@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 import { Grid, Typography, Container, Box } from "@mui/material";
 import {
   BsSlack,
