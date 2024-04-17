@@ -9,3 +9,8 @@ module.exports = {
   graphql: jest.fn(),
   useStaticQuery: jest.fn(),
 };
+module.exports = {
+  // Mock implementations for Gatsby's static query and other components
+  StaticQuery: props => props.render({ data: {} }),
+  useStaticQuery: () => ({ data: {} }),
+};
